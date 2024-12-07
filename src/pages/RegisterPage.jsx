@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import { registerSchema } from "./../schema/auth";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { registerAccount } from './../service/auth';
+import { ToastContainer } from 'react-toastify';
 
 
 const RegisterPage = () => {
@@ -107,6 +108,8 @@ const RegisterPage = () => {
           </Link>
         </p>
       </form>
+
+      <ToastContainer /> 
     </>
   );
 };

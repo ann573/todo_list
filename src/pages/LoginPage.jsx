@@ -1,11 +1,9 @@
-import React, { useContext } from "react";
-import { Link } from 'react-router-dom';
+import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from "react-hook-form";
-import { useNavigate } from 'react-router-dom';
-import { loginSchema } from './../schema/auth';
-import {zodResolver} from '@hookform/resolvers/zod'
-import { UserContext } from './../context/AuthContext';
+import { Link, useNavigate } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
 import { loginAccount } from "../service/auth";
+import { loginSchema } from './../schema/auth';
 const LoginPage = () => {
 
   const nav = useNavigate()
@@ -16,7 +14,7 @@ const LoginPage = () => {
 
   const submitForm = async (dataBody) => {
     try {
-      const {data} = await loginAccount(dataBody)
+      const data = await loginAccount(dataBody)
       if (data)
       {
         localStorage.setItem("accessToken", data.accessToken)
@@ -49,6 +47,7 @@ const LoginPage = () => {
 
         <p className="my-3">Bạn chưa có tài khoản? <Link to="/register" className="italic underline text-blue-400">Đăng ký ngay</Link></p>
       </form>
+      <ToastContainer /> 
     </>
   );
 };

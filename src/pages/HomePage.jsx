@@ -11,7 +11,7 @@ const HomePage = () => {
   const user = JSON.parse(localStorage.getItem("user")) || null;
   useEffect(() => {
     (async () => {
-      setListTodo(await getTodo(`/todolist?userId=${user.id}`));
+      setListTodo(await getTodo(`/todolist?userId=${user.id}`) || []);
       setTotalCompleted((await getTodo(`/todolist?userId=${user.id}&&status=true`)).length)
     })();
   }, []);
