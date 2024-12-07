@@ -13,8 +13,8 @@ export const registerAccount = async (dataBody) =>{
 
 export const loginAccount = async (dataBody) =>{
     try {
-        const data = await instance.post("/login", dataBody)
-        return data
+        const res = await instance.post("/login", dataBody)
+        return res.data 
     } catch (error) {
         if (error.response?.status === 400) {
             toast.error("Tài khoản hoặc mật khẩu không đúng");

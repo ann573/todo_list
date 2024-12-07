@@ -9,12 +9,14 @@ const HomePage = () => {
 
   const accessToken = localStorage.getItem("accessToken") || null;
   const user = JSON.parse(localStorage.getItem("user")) || null;
-  useEffect(() => {
-    (async () => {
-      setListTodo(await getTodo(`/todolist?userId=${user.id}`) || []);
-      setTotalCompleted((await getTodo(`/todolist?userId=${user.id}&&status=true`)).length)
-    })();
-  }, []);
+  if(user){
+    useEffect(() => {
+      (async () => {
+        setListTodo(await getTodo(`/todolist?userId=${user.id}`) );
+        setTotalCompleted((await getTodo(`/todolist?userId=${user.id}&&status=true`)).length)
+      })();
+    }, []);
+  }
 
   async function changeStatus(id){
     const findTodo = listTodo.find((item) => item.id === id);

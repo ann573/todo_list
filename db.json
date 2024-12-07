@@ -15,6 +15,14 @@
       "confirmPassword": "123123",
       "todo": [],
       "id": 2
+    },
+    {
+      "email": "abc@gmail.com",
+      "password": "$2a$10$EMzjcgAMTfgG62mxTK.MC.JwuqVslipeofJd8Nmz7RHNM0uX0FhEC",
+      "username": "Ahihi",
+      "confirmPassword": "123123",
+      "todo": [],
+      "id": 3
     }
   ],
   "todolist": [
