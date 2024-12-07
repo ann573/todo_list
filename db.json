@@ -1,0 +1,54 @@
+{
+  "users": [
+    {
+      "email": "admin@gmail.com",
+      "password": "$2a$10$XXp27bEgr.NVKD..53PlS.DJH75IIFKWUrgqHEXYAerPAYDvo94jq",
+      "username": "admin",
+      "confirmPassword": "123123",
+      "todo": [],
+      "id": 1
+    },
+    {
+      "email": "an@gmail.com",
+      "password": "$2a$10$.8IFET6pdlcmcep6AsrxAO7Xq1GsFWKz.Q28aR9O1EHiIATT9Evvi",
+      "username": "Ann",
+      "confirmPassword": "123123",
+      "todo": [],
+      "id": 2
+    }
+  ],
+  "todolist": [
+    {
+      "title": "Đây là công việc 3",
+      "priority": "low",
+      "description": "Đây là công việc 3",
+      "status": false,
+      "userId": 1,
+      "id": 1
+    },
+    {
+      "title": "Đây là công việc 2",
+      "priority": "low",
+      "description": "Mô tả ",
+      "status": true,
+      "userId": 1,
+      "id": 2
+    },
+    {
+      "title": "Lau nhà",
+      "priority": "high",
+      "description": "Nay phải lau nhà",
+      "status": false,
+      "userId": 2,
+      "id": 3
+    },
+    {
+      "title": "Đổ rác",
+      "priority": "high",
+      "description": "Không phải đổ rác",
+      "status": true,
+      "userId": 2,
+      "id": 4
+    }
+  ]
+}
