@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { getTodo, removeTodo, updateTodo } from "../service/todo.js";
 
-// /todolist?usersId=${+userId}
 const HomePage = () => {
   const [listTodo, setListTodo] = useState([]);
   const [totalCompleted, setTotalCompleted]= useState(0)
